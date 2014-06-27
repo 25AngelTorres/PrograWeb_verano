@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registro Equipos Copa Mundial Brasil 2014</title>
+<link rel="stylesheet" type="text/css" href="CSS/estilos.css" />
+</head>
+
+<body style="background-image:url(Imagen/Fondo02.jpg); background-size:100%; ">  
+
+    <table class="principal" align="center" border="1">
+    	<tr>
+        	<th><a href="lista_equipos.html">Lista de Equipos</a></th>
+            <th><a href="calendario_resultados.html">Calendario y Resultados</a></th>
+            <th><a href="tabla_grupos.html">Tabla de Grupos</a></th>
+        </tr>
+        <tr>
+        	<th><a href="goleo_individual.html">Goleo Individual</a></th>
+            <th><a href="goleo_equipos.html">Goleo por Equipos</a></th>
+            <th><a href="estadisticas.html">Estad&iacute;sticas</a></th>
+        </tr>
+        <tr>
+        	<th colspan="3"><a href="noticias.html">Noticias</a></th>
+        </tr>
+        <tr>
+        	<th colspan="3">
+            	<a href="captura_resultados.html">Captura Resultados</a>
+            </th>
+        </tr>
+        <tr>
+        	<th colspan="3"><a href="registrar_equipos.html">Registrar Equipo</a></th>
+        </tr>
+        <tr>
+        	<th colspan="3"><a href="registrar_jugador.html">Registrar Jugador</a></th>
+        </tr>
+    </table>
+    <div align="center">
+    	<img src="Imagen/imagen02.jpg" width="50%" />
+    </div>
+    <div id="registrar">
+    <form method="post" action="">
+    	<select name="id_continente">
+        	<option value="">Selecciona Continente</option>
+            <option value="america">America</option>
+            <option value="europa">Europa</option>
+            <option value="asia">Asia</option>
+            <option value="africa">Africa</option>
+        </select>
+      	<br />
+        <select name="id_pais">
+            <option value="">Selecciona Pais</option>
+        	<option value="argelia">Argelia</option>
+            <option value="camerun">Camer&uacute;n</option>
+            <option value="costa_marfil">Costa de Marfil</option>
+            <option value="ghana">Ghana</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="australia">Australia</option>
+            <option value="iran">Ir&aacute;n</option>
+            <option value="japon">Jap&oacute;n</option>
+            <option value="corea">Rep&uacute;blica de Corea</option>
+            <option value="alemania">Alemania</option>
+            <option value="belgica">B&eacute;lgica</option>
+            <option value="bosnia">Bosnia y Herzegovina</option>
+            <option value="croacia">Croacia</option>
+            <option value="espana">Espa&ntilde;a</option>
+            <option value="francia">Francia</option>
+            <option value="grecia">Grecia</option>
+            <option value="inglaterra">Inglaterra</option>
+            <option value="italia">Italia</option>
+            <option value="holanda">Pas&iacute;ses Bajos</option>
+            <option value="portugal">Portugal</option>
+            <option value="rusia">Rusia</option>
+            <option value="suiza">Suiza</option>
+            <option value="costa_rica">Costa Rica</option>
+            <option value="esa">EEUU</option>
+            <option value="honduras">Honduras</option>
+            <option value="mexico">M&eacute;xico</option>
+        </select>
+        <br />
+    	<label for="id_nombre">Nombre</label>
+        <input type="text" id="id_nombre" name="id_nombre" required="Campo requerido" />
+        <br />
+        <label for="id_bandera">Bandera</label>
+        <input type="file" id="id_bandera" name="id_bandera" required="Campo Requerido" />
+        <br />
+        <label for="id_escudo">Escudo</label>
+        <input type="file" id="id_escudo" name="id_escudo" required="Campo Requerido" />
+        <br />
+        <label for="id_uniforme">Uniforme</label>
+        <input type="file" id="id_uniforme" name="id_uniforme" required="Campo Requerido" />
+        <br />
+        <input type="submit" />
+    </form>
+    </div>
+</body>
+</html>
