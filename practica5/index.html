@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(
+			function(){
+				/* Manda un mensaje */
+				//alert('Hola javascript');
+
+				alert($('.elemento2').css('fontSize'));
+
+				/* Cambiar el tamaño del elemento */
+				$('.elemento2').css('fontSize' , '100px');
+
+				alert($('.elemento2').css('fontSize'));
+
+				/* Oculta el elemento de forma lenta */
+				//$('#elemento1').hide('slow');
+
+				/* Muestra el elemento */
+				//$('#elemento1').show('slow');
+
+				/* Al dar click sobre el elemento se ocultara dicho elemento o se 
+				mostrara */
+				$('#elemento1').click(
+					function(){
+						$(this).hide('slow');
+					}
+				);
+				
+				$('#parrafo').click(
+					function(){
+							$(this).css('color' , '#0C9')
+						}
+				);
+				
+				function Agrandar($x){
+					alert($x);
+					//$(x).css('width','300pc');
+				}
+				
+				$('#boton').click(
+					function(){
+						$a = parseInt($('#input1').val());
+						$b = parseInt($('#input2').val());
+						$resultado = $a + $b;
+						alert($resultado);
+					}
+				);
+				
+				$('.titulo').click(
+					function(){
+						$(this).css('font-size', '16px');	
+					}
+				);
+				
+			}
+		)
+	</script>
+
+</head>
+
+<body>
+	<div id="container" class="elemento2">
+		<h1 id="titulo">
+			<p class="parrafo" id="elemento1"> El que gusten </p>
+		</h1>
+	</div>
+
+	<div>
+		<h1 class="titulo"> El que gusten	</h1>
+		<h2 class="titulo"> El que gusten	</h2>
+	</div>
+	<div>
+    	<p id="parrafo">Parrafo de informaci&oacute;n b&aacute;sica
+        </p>
+    </div>
+    	<div>
+        	<label> Ingresa dos valores a sumar </label>
+            <br />
+        	<input type="text" id="input1" />
+            <br />
+            <input type="text" id="input2" />
+            <br />
+            <button id="boton">SUMAR</button>
+            <br />
+        </div>
+        <hr />
+
+        
+</body>
+
+</html>
