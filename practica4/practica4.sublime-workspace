@@ -28,51 +28,12 @@
 	"buffers":
 	[
 		{
-			"file": "form_pais.html",
+			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.php",
 			"settings":
 			{
-				"buffer_size": 2921,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "form_continente.html",
-			"settings":
-			{
-				"buffer_size": 2222,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "form_ciudad.html",
-			"settings":
-			{
-				"buffer_size": 2171,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "form_posision.html",
-			"settings":
-			{
-				"buffer_size": 2564,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "form_estadio.html",
-			"settings":
-			{
-				"buffer_size": 2594,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2042,
-				"line_ending": "Windows"
+				"buffer_size": 104,
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		}
 	],
@@ -100,6 +61,13 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/moment.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/index.html",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_estadio.html",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_posision.html",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_ciudad.html",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_continente.html",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_pais.html",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica3/index.html",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica2/index.html",
 		"/C/Users/Angel/Desktop/Brasil-Bootstrap/form1.html",
@@ -143,174 +111,32 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "form_pais.html",
+					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.php",
 					"settings":
 					{
-						"buffer_size": 2921,
+						"buffer_size": 104,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1511,
-								1899
+								64,
+								64
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "form_continente.html",
-					"settings":
-					{
-						"buffer_size": 2222,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								262,
-								262
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "form_ciudad.html",
-					"settings":
-					{
-						"buffer_size": 2171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1752,
-								1752
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 465.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "form_posision.html",
-					"settings":
-					{
-						"buffer_size": 2564,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								778,
-								778
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "form_estadio.html",
-					"settings":
-					{
-						"buffer_size": 2594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2010,
-								2010
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 2042,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1455,
-								1455
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
