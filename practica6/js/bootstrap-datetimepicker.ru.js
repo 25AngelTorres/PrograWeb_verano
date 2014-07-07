@@ -3,6 +3,7 @@
 // author : Viktorminator : https://github.com/Viktorminator
 // Author : Menelion Elensúle : https://github.com/Oire
 
+
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         define(['moment'], factory); // AMD
