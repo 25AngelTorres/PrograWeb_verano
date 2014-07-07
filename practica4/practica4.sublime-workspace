@@ -27,54 +27,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.min.js",
-			"settings":
-			{
-				"buffer_size": 31821,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.es.js",
-			"settings":
-			{
-				"buffer_size": 2494,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.js",
-			"settings":
-			{
-				"buffer_size": 49555,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.ru.js",
-			"settings":
-			{
-				"buffer_size": 5472,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/moment.js",
-			"settings":
-			{
-				"buffer_size": 77206,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.js",
-			"settings":
-			{
-				"buffer_size": 60682,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -100,8 +52,20 @@
 	},
 	"file_history":
 	[
-		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.php",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.min.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap.css.map",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap.css",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap-theme.min.css",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap-theme.css.map",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap.min.css",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap-theme.css",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap-datetimepicker.css",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.es.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.ru.js",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/moment.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.js",
+		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.php",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/index.html",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_estadio.html",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica4/form_posision.html",
@@ -151,175 +115,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.min.js",
-					"settings":
-					{
-						"buffer_size": 31821,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								86,
-								86
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 252.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.es.js",
-					"settings":
-					{
-						"buffer_size": 2494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								118,
-								118
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.js",
-					"settings":
-					{
-						"buffer_size": 49555,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1301,
-								1301
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap-datetimepicker.ru.js",
-					"settings":
-					{
-						"buffer_size": 5472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								181,
-								181
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/moment.js",
-					"settings":
-					{
-						"buffer_size": 77206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								133,
-								133
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.js",
-					"settings":
-					{
-						"buffer_size": 60682,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4069,
-								4069
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1935.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
