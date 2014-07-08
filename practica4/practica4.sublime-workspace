@@ -27,6 +27,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.html",
+			"settings":
+			{
+				"buffer_size": 16590,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -52,6 +60,7 @@
 	},
 	"file_history":
 	[
+		"/C/Windows/System32/xactengine2_0.dll",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/js/bootstrap.min.js",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap.css.map",
 		"/C/xampp/htdocs/PWeb/PrograWeb_verano/practica6/css/bootstrap.css",
@@ -115,8 +124,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/PWeb/PrograWeb_verano/practica7/index.html",
+					"settings":
+					{
+						"buffer_size": 16590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10049,
+								10049
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5535.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
