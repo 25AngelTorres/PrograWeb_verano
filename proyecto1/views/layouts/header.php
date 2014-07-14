@@ -9,15 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Clase programación web verano</title>
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
+<!-- Custom styles for this template -->
         <link href="../css/justified-nav.css" rel="stylesheet">
         
-
-
-
 <!-- Datepicket -->
        <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
 
@@ -25,19 +22,20 @@
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
 
- <!-- Fancybox -->
+<!-- Fancybox -->
         <!-- Add fancyBox -->
         <link rel="stylesheet" href="../css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
         <!-- Optionally add helpers - button, thumbnail and/or media -->
         <link rel="stylesheet" href="../css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
         <link rel="stylesheet" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-        
+
+<link rel="stylesheet" href="../css/micss.css" type="text/css" />
+
 
 
   </head>
 
-  <body role="document" style="background-color:#033;">
-
+  <body >
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -83,5 +81,5 @@
       </div>
     </div>
 
-    <div class="container theme-showcase" role="main" style="background-color:RGBA(255,255,255,0.5); padding-top:20px;">
+    <div class="container theme-showcase" role="main" id="container">
 

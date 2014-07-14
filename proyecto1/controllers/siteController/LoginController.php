@@ -1,6 +1,6 @@
 <?php
 /*
-Contine la sclases 
+Contine las clases 
 */
 
 	class LoginController extends Usuario{
