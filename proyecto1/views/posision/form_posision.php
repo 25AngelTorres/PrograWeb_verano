@@ -5,15 +5,19 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Posision.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../controllers/PosisionController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//      print_r($_POST);
+//    echo "</pre>";
+
+//Inicializar el controlador
+    $PosisionC = new PosisionController();
+    $PosisionC->inserta_posision($_POST);
   }
 
 ?>

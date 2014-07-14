@@ -9,43 +9,27 @@ class Equipo extends Modelo{
         'idpais'=>array(),
         'escudo'=>array(),
     );
-    
+
     public $errores = array( );
     
     private $nombre;
     private $idpais;
     private $escudo;
        
+
+//Instancia del objeto modelo para implementar la conexion con la base de datos
     function Equipo(){
         parent::Modelo();
     }
     
     public function get_atributos(){
         $rs = array();
-        foreach ($this->atributos as $key => $value) {
+            foreach ($this->atributos as $key => $value) {
             $rs[$key]=$this->$key;
         }
         return $rs;
     }
     
-    
-    public function get_nombre(){
-        return $this->nombre;
-    } 
-
-    public function set_nombre($valor){
-
-        $er = new Er();
-        
-        if ( !$er->valida_email($valor) ){
-            $this->errores[] = "Este e-mail (".$valor.") no es valido";
-        }
-
-        //trim simplemente quita espacios al principio y final
-        $this->nombre = trim($valor);
-
-    }
-
    
     public function get_nombre(){
         return $this->nombre;
@@ -53,24 +37,53 @@ class Equipo extends Modelo{
 
     public function set_nombre($valor){
 
+        //objeto de la clase Er
         $er = new Er();
-        
-        if ( !$er->valida_email($valor) ){
-            $this->errores[] = "Este e-mail (".$valor.") no es valido";
+
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = 'Nombre no valido ('.$valor.').';
         }
 
-        //trim simplemente quita espacios al principio y final
+        //trim simplemente quita espacios al principio y final de la cadena
         $this->nombre = trim($valor);
 
     }
 
     public function get_idpais(){
         return $this->idpais;
+    } 
+
+    public function set_idpais($valor){
+        //objeto de la clase Er
+        $er = new Er();
+
+        if ( !$er->valida_numero_entero($valor) ){
+            $this->errores[] = 'ID no valido ('.$valor.'). no es un entero';
+        }
+
+        //trim simplemente quita espacios al principio y final de la cadena
+        $this->idpais = trim($valor);
+
     }
     
-    public function set_password($valor){
-        $this->password = trim( md5($valor) );
+
+   public function get_escudo(){
+        return $this->escudo;
+    } 
+
+    public function set_escudo($valor){
+        //objeto de la clase Er
+        $er = new Er();
+
+        if ( !$er->valida_imagen($valor) ){
+            $this->errores[] = 'Imagen no valida ('.$valor.'). Formato no aceptado, solo imagenes .gif, .png, jpeg o .jpg';
+        }
+
+        //trim simplemente quita espacios al principio y final de la cadena
+        $this->escudo = trim($valor);
+
     }
+    
            
 }
 

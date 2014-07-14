@@ -5,17 +5,20 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Estadio.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../controllers/EstadioController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['Nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
-  }
+//  echo "<pre>";
+//      print_r($_POST);
+//    echo "</pre>";
 
+//    Inicializar el controlador
+    $EstadioC = new EstadioController();
+    $EstadioC->inserta_estadio($_POST);
+  }
 ?>
 
 <div class="row">
@@ -39,6 +42,7 @@
               <div class="col-sm-8">
                 <select id="id_ciudad_estadio" class="form-control" name="idciudad">
                   <option>Selecciona Ciudad</option>
+                  <option value="1">Rio</option>
                 </select>
               </div>
             </div>

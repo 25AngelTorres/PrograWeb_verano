@@ -4,16 +4,38 @@
   include ('../../libs/adodb5/adodb.inc.php');
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
-  //include ('../../models/Equipo.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../models/Integrante.php');
+  include ('../../models/Entrenador.php');
+  include ('../../models/Jugador.php');
+  include ('../../controllers/IntegranteController.php');
+  include ('../../controllers/JugadorController.php');
+  include ('../../controllers/EntrenadorController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
+
+//    echo "<pre>";
+//      print_r($_POST);
+//    echo "</pre>";
+
+//Objeto para controlador de Integrante
+    $IntegranteC = new IntegranteController();
+    $IntegranteC->inserta_integrante($_POST);
+    
+    if(isset($_POST['numero'])){
+//Objeto para controlador de Integrante
+      $JugadorC = new JugadorController();
+      $JugadorC->inserta_jugador($_POST);
+    }
+    
+    if($_POST['idpais']>'0'){
+//Objeto para controlador de Integrante
+      $EntrenadorC = new EntrenadorController();
+      $EntrenadorC->inserta_entrenador($_POST);
+    }
+
   }
 
 ?>
@@ -75,17 +97,20 @@
                 <label for="id_equipo_integrante" class="col-sm-4 control-label">Equipo: </label>
                   <div class="col-sm-8">
                     <select id="id_equipo_integrante" class="form-control" name="idequipo">
- 	                   <option>Seleccione un equipo</option>
+ 	                   <option value="0">Seleccione un equipo</option>
+                     <option value="1">Brasil</option>
+                     <option value="2">Mexico</option>
                     </select>
                   </div>
             </div>
                     
-			<div class="form-group">
-		        <div class="col-sm-offset-2 col-sm-10">
+			      <div class="form-group">
+		            <div class="col-sm-offset-2 col-sm-10">
         	        <a class="btn btn-primary btn-lg" role="button" id="MostrarJugador">Jugador &raquo;</a>
                     <a class="btn btn-primary btn-lg" role="button" id="MostrarEntrenador">Entrenador &raquo;</a>
                 </div>
             </div>
+
 <!-- Formulario de jugador -->
             <div id="form_tipo_jugador">
               <div class="form-group">
@@ -96,15 +121,15 @@
                  </div>
 
                  <div class="form-group">
-                      <label for="id_posision_jugador" class="col-sm-4 control-label">Equipo: </label>
+                      <label for="id_posision_jugador" class="col-sm-4 control-label">Posision: </label>
                       <div class="col-sm-8">
-                        <select id="id_posision_jugador" class="form-control" name="idequipo">
-                          <option>Seleccione un equipo</option>
-                          <option>Defensa</option>
-                          <option>Medio</option>
-                          <option>Delantero</option>
-                          <option>Portero</option>
-                          <option>Perro (Solo si es Luis Suarez)</option>
+                        <select id="id_posision_jugador" class="form-control" name="idposision">
+                          <option value="0">Seleccione una Posision</option>
+                          <option value="1">Defensa</option>
+                          <option value="2">Medio</option>
+                          <option value="3">Delantero</option>
+                          <option value="4">Portero</option>
+                          <option value="5">Perro (Solo si es Luis Suarez)</option>
                         </select>
                       </div>
                   </div>
@@ -115,22 +140,13 @@
                       <label for="id_pais_entrenador" class="col-sm-4 control-label">Pa&iacute;s del Entrenador: </label>
                       <div class="col-sm-8">
                         <select id="id_pais_entrenador" class="form-control" name="idpais">
-                          <option>Seleccione un p&iacute;s</option>
-                          <option>M&eacute;xico</option>
+                          <option value="0">Seleccione un pais</option>
+                            <option value="1">Mexico</option>
+                            <option value="2">Alemania</option>
                         </select>
                       </div>
                   </div>
           </div>
-
-
-	    	<div class="form-group">
-          		<label for="id_ciudad_estadio" class="col-sm-4 control-label">Ciudad donde se encuentra el estadio: </label>
-	          	<div class="col-sm-8">
-                	<select id="id_ciudad_estadio" class="form-control" name="idciudad">
-                  		<option>Selecciona Ciudad</option>
-                	</select>
-              	</div>
-    		</div>
 
 		</div>
 

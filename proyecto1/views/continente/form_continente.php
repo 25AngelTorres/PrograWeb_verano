@@ -5,16 +5,22 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Continente.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../controllers/ContinenteController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//      print_r($_POST);
+//    echo "</pre>";
+
+//Crear objeto del controlador
+  $ContinenteC = new ContinenteController();
+  $ContinenteC->inserta_continente($_POST);
   }
+
+
 
 ?>
 

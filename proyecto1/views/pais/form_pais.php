@@ -5,15 +5,19 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Pais.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../controllers/PaisController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//      print_r($_POST);
+//    echo "</pre>";
+  
+//Crear objeto del controlador
+    $PaisC= new PaisController();
+    $PaisC->inserta_pais($_POST);
   }
 
 ?>
@@ -40,6 +44,8 @@
               <div class="col-sm-8">
                 <select id="id_continente_continente" class="form-control" name="idcontinente">
                   <option>Selecciona un continente</option>
+                  <option value="1">America</option>
+                  <option value="2">Europa</option>
                 </select>
               </div>
             </div>

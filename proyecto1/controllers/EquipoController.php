@@ -3,12 +3,39 @@
 Contine las clases 
 */
 
-	class LoginController extends Usuario{
+//	class EquipoController extends Equipo{
+	class EquipoController {
 		
+		//Instancia de la clase Equipo----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 parent::Usuario();
+			 //parent::Equipo();
 		}
+
+		//Funcion para insertar un equipo
+		public function inserta_equipo($datos){
+			//Solo es para acegurarse que se estan enviando los archivos
+		    echo "<pre>";
+		      print_r($datos);
+		      echo   'Desde Controller';
+
+		    echo "</pre>";
+			//Conexion con Equipo el cual continene Modelo y Conexion
+			$equipo=new Equipo();
+
+			$equipo->set_nombre($datos['nombre']);
+			$equipo->set_idpais($datos['idpais']);
+			$equipo->set_escudo($datos['escudo']);
+
+			//Verificar si existen errores
+			if(count ($equipo->errores)>0){
+				print_r($equipo->errores);
+			}
+
+			//Detener un script *die();
+
+		}
+
 		public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

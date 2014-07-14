@@ -16,7 +16,7 @@ class Pais extends Modelo{
     private $bandera;
     private $idcontinente;
           
-    function Continente(){
+    function Pais(){
         parent::Modelo();
     }
     
@@ -28,17 +28,16 @@ class Pais extends Modelo{
         return $rs;
     }
     
-    
+//nombre 
     public function get_nombre(){
         return $this->nombre;
     } 
-
     public function set_nombre($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
-            $this->errores[] = "Este e-mail (".$valor.") no es valido";
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
 
         //trim simplemente quita espacios al principio y final
@@ -46,14 +45,40 @@ class Pais extends Modelo{
 
     }
 
-    public function get_password(){
-        return $this->baja;
-    }
-    
-    public function set_password($valor){
-        $this->password = trim( md5($valor) );
-    }
+//idcontinente
+    public function get_idcontinente(){
+        return $this->idcontinente;
+    } 
+    public function set_idcontinente($valor){
+
+        $er = new Er();
         
+        if ( !$er->valida_numero_entero($valor) ){
+            $this->errores[] = "Este id (".$valor.") no es valido";
+        }
+
+        //trim simplemente quita espacios al principio y final
+        $this->idcontinente = trim($valor);
+
+    }
+
+//bandera
+    public function get_bandera(){
+        return $this->bandera;
+    } 
+    public function set_bandera($valor){
+
+        $er = new Er();
+        
+        if ( !$er->valida_imagen($valor) ){
+            $this->errores[] = "Esta imagen (".$valor.") no es valida. Formato no valido";
+        }
+
+        //trim simplemente quita espacios al principio y final
+        $this->bandera = trim($valor);
+
+    }
+
     
 }
 

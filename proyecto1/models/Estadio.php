@@ -13,7 +13,7 @@ class Estadio extends Modelo{
     public $errores = array( );
     
     private $Nombre;
-    private $idestadio;
+    private $idciudad;
        
     function Equipo(){
         parent::Modelo();
@@ -27,17 +27,16 @@ class Estadio extends Modelo{
         return $rs;
     }
     
-    
+//Nombre 
     public function get_nombre(){
         return $this->Nombre;
     } 
-
     public function set_nombre($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
-            $this->errores[] = "Este e-mail (".$valor.") no es valido";
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
 
         //trim simplemente quita espacios al principio y final
@@ -45,13 +44,24 @@ class Estadio extends Modelo{
 
     }
 
-    public function get_password(){
-        return $this->baja;
+//idciudad
+    public function get_idciudad(){
+        return $this->idciudad;
+    } 
+    public function set_idciudad($valor){
+        //objeto de la clase Er
+        $er = new Er();
+
+        if ( !$er->valida_numero_entero($valor) ){
+            $this->errores[] = 'ID no valido ('.$valor.'). no es un entero';
+        }
+
+        //trim simplemente quita espacios al principio y final de la cadena
+        $this->idciudad = trim($valor);
+
     }
-    
-    public function set_password($valor){
-        $this->password = trim( md5($valor) );
-    }
+
+   
         
     
 }

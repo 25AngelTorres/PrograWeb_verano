@@ -5,19 +5,18 @@
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Equipo.php');
-  //include ('../../controllers/siteController/EquipoController.php');
+  include ('../../controllers/EquipoController.php');
   include ('../../libs/Er.php');
 
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
-      print_r($_POST);
-    echo "</pre>";
+    //Inicializar el controlador
+    $EquipoC = new EquipoController();
+    $EquipoC->inserta_equipo($_POST);
   }
 
 ?>
-
 <div class="row">
 	<div class="col-md-12">
 		<center><h1><span class="glyphicon glyphicon-th"></span> Insertar Equipo</h1></center>

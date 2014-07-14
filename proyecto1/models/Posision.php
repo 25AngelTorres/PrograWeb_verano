@@ -26,30 +26,36 @@ class Posision extends Modelo{
         return $rs;
     }
     
-    
+//nombre
     public function get_nombre(){
         return $this->nombre;
     } 
-
     public function set_nombre($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_email($valor) ){
-            $this->errores[] = "Este e-mail (".$valor.") no es valido";
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
 
         //trim simplemente quita espacios al principio y final
         $this->nombre = trim($valor);
-
     }
 
-    public function get_password(){
-        return $this->baja;
-    }
-    
-    public function set_password($valor){
-        $this->password = trim( md5($valor) );
+//Abreviatura
+    public function get_abreviatura(){
+        return $this->abreviatura;
+    } 
+    public function set_abreviatura($valor){
+
+        $er = new Er();
+        
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = "Esta abreviatura (".$valor.") no es valida";
+        }
+
+        //trim simplemente quita espacios al principio y final
+        $this->abreviatura = trim($valor);
     }
         
     
