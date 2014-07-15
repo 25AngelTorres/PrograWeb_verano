@@ -32,13 +32,13 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="page-header">
-                  <h1>Autor <small>Insertar</small></h1>
+                  <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Autor <small>Insertar</small></h1>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
-                <form class="form-horizontal" role="form" id="registerForm" method="post">
+                <form class="form-horizontal" role="form" id="registerForm" method="POST">
 <!-- Nombre -->
                   <div class="form-group">
                     <label for="autor_nombre" class="col-sm-4 control-label"> Nombre del autor: </label>
@@ -62,7 +62,7 @@
                   </div>
 
                   <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
+                    <div class="col-sm-6">
                       <input type="submit" value="Enviar"  />
                     </div>
                   </div>

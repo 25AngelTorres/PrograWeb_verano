@@ -64,7 +64,7 @@ class Autor extends Modelo{
         //objeto de la clase Er
         $er = new Er();
         if ( !$er->valida_email($valor) ){
-            $this->errores[] = 'Email no valida ('.$valor.').';
+            $this->errores[] = 'Email no valido ('.$valor.').';
         }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->email = trim($valor);
