@@ -45,14 +45,14 @@
                   <div class="form-group">
                     <label for="revista_titulo" class="col-sm-3 control-label">Titulo:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="titulo" id="revista_titulo" />
+                      <input type="text" class="form-control" name="titulo" id="revista_titulo" placeholder="Titulo de la revista" />
                     </div>
                   </div>
 <!-- Subtitulo -->
                   <div class="form-group">
                     <label for="revista_subtitulo" class="col-sm-3 control-label">Subtitulo:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="subtitulo" id="revista_subtitulo" />
+                      <input type="text" class="form-control" name="subtitulo" id="revista_subtitulo" placeholder="Subtitulo de la revista" />
                     </div>
                   </div>
 <!-- Portada -->
@@ -74,14 +74,14 @@
                   <div class="form-group">
                     <label for="revista_numero" class="col-sm-3 control-label">N&uacute;mero: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="numero" id="revista_numero" />
+                      <input type="text" class="form-control" name="numero" id="revista_numero" placeholder="Numero" />
                     </div>
                   </div>
 <!-- Volumen -->
                   <div class="form-group">
                     <label for="revista_volumen" class="col-sm-3 control-label">Volumen: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="volumen" id="revista_volumen" />
+                      <input type="text" class="form-control" name="volumen" id="revista_volumen" placeholder="Volumen de la revista" />
                     </div>
                   </div>
                 </div>
@@ -90,28 +90,28 @@
                   <div class="form-group">
                     <label for="revista_clave" class="col-sm-3 control-label">Clave: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="clave" id="revista_clave" />
+                      <input type="text" class="form-control" name="clave" id="revista_clave" placeholder="Clave de la revista" />
                     </div>
                   </div>
 <!-- Nombre -->
                   <div class="form-group">
                     <label for="revista_nombre" class="col-sm-3 control-label">Nombre: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="nombre" id="revista_nombre" />
+                      <input type="text" class="form-control" name="nombre" id="revista_nombre" placeholder="Nombre de la revista" />
                     </div>
                   </div>
 <!-- Editorial -->    
                   <div class="form-group">
                     <label for="revista_editorial" class="col-sm-3 control-label">Editorial: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="editorial" id="revista_editorial" />
+                      <input type="text" class="form-control" name="editorial" id="revista_editorial" placeholder="Editorial de la revista" />
                     </div>
                   </div>
 <!-- Directorio -->
                   <div class="form-group">
                     <label for="revista_directorio" class="col-sm-3 control-label">Directorio: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="directorio" id="revista_directorio" />
+                      <input type="text" class="form-control" name="directorio" id="revista_directorio" placeholder="Directorio de la Revista" />
                     </div>
                   </div>
 <!-- Status -->

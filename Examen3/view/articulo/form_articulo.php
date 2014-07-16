@@ -45,12 +45,12 @@
                   <div class="form-group">
                     <label for="articulo_nombre" class="col-sm-3 control-label">Titulo:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="nombre" id="articulo_nombre" />
+                      <input type="text" class="form-control" name="nombre" id="articulo_nombre" placeholder="Nombre del art&iacute;culo" />
                     </div>
                   </div>
 <!-- Fecha de creacion -->
                   <div class="form-group">
-                    <label for="datetimepicker6" class="col-sm-3 control-label">Fecha de creacion: </label>
+                    <label for="datetimepicker6" class="col-sm-3 control-label">Fecha: </label>
                   <!-- Ejemplo 6 de Boostrap datetimepicker -->
                     <div class='col-sm-6'>
                       <input type='text' class="form-control" id='datetimepicker6' name="fecha_creacion"/>
@@ -60,31 +60,31 @@
                   <div class="form-group">
                     <label for="articulo_resumen" class="col-sm-3 control-label">Resumen:</label>
                     <div class="col-sm-6">
-                      <textarea class="form-cntrol" name="resumen" id="articulo_resumen"></textarea>
-                      
+                      <textarea class="form-cntrol" name="resumen" id="articulo_resumen" placeholder="Resumen del art&iacute;culo"></textarea>
                     </div>
                   </div>
-<!-- Portada -->
+<!-- Abstract -->
                   <div class="form-group">
-                    <label for="revista_portada" class="col-sm-3 control-label">Portada:</label>
+                    <label for="articulo_abstract" class="col-sm-3 control-label">Abstract:</label>
                     <div class="col-sm-6">
-                      <input type="file" class="form-control" name="portada" id="revista_portada" />
+                      <textarea class="form-cntrol" name="abstract" id="articulo_abstract" placeholder="Abstract del art&iacute;culo"></textarea>
                     </div>
                   </div>
-<!-- Numero -->
+<!-- Introduccion -->
                   <div class="form-group">
-                    <label for="revista_numero" class="col-sm-3 control-label">N&uacute;mero: </label>
+                    <label for="articulo_introduccion" class="col-sm-3 control-label">Introducci&oacute;n:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="numero" id="revista_numero" />
+                      <textarea class="form-cntrol" name="introduccion" id="articulo_introduccion" placeholder="Introducci&oacute;n del art&iacute;culo"></textarea>
                     </div>
                   </div>
-<!-- Volumen -->
+<!-- Metodologia -->
                   <div class="form-group">
-                    <label for="revista_volumen" class="col-sm-3 control-label">Volumen: </label>
+                    <label for="articulo_metodologia" class="col-sm-3 control-label">Metodolog&iacute;a:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="volumen" id="revista_volumen" />
+                      <textarea class="form-cntrol" name="metodologia" id="articulo_metodologia" placeholder="Metodologia del art&iacute;culo"></textarea>
                     </div>
                   </div>
+
                 </div>
                 <div class="col-md-6">
 <!-- Archivo_pdf -->
@@ -106,25 +106,32 @@
                       </select>
                     </div>
                   </div>
-<!-- Nombre -->
+<!-- Contenido -->
                   <div class="form-group">
-                    <label for="revista_nombre" class="col-sm-3 control-label">Nombre: </label>
+                    <label for="articulo_contenido" class="col-sm-3 control-label">Contenido:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="nombre" id="revista_nombre" />
+                      <textarea class="form-cntrol" name="contenido" id="articulo_contenido" placeholder="Contenido del art&iacute;culo"></textarea>
                     </div>
                   </div>
-<!-- Editorial -->    
+<!-- Conclusiones -->
                   <div class="form-group">
-                    <label for="revista_editorial" class="col-sm-3 control-label">Editorial: </label>
+                    <label for="articulo_conclusiones" class="col-sm-3 control-label">Conclusiones:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="editorial" id="revista_editorial" />
+                      <textarea class="form-cntrol" name="conclusiones" id="articulo_conclusiones" placeholder="Conclusiones del art&iacute;culo"></textarea>
                     </div>
                   </div>
-<!-- Directorio -->
+<!-- Agradecimientos -->
                   <div class="form-group">
-                    <label for="revista_directorio" class="col-sm-3 control-label">Directorio: </label>
+                    <label for="articulo_agradecimientos" class="col-sm-3 control-label">Agradecimientos:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="directorio" id="revista_directorio" />
+                      <textarea class="form-cntrol" name="agradecimientos" id="articulo_agradecimientos" placeholder="Agradecimientos del art&iacute;culo"></textarea>
+                    </div>
+                  </div>
+<!-- Referencias -->
+                  <div class="form-group">
+                    <label for="articulo_referencias" class="col-sm-3 control-label">Referencias:</label>
+                    <div class="col-sm-6">
+                      <textarea class="form-cntrol" name="referencias" id="articulo_referencias" placeholder="Referencias del art&iacute;culo"></textarea>
                     </div>
                   </div>
 
