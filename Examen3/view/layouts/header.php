@@ -65,8 +65,10 @@
               <h3 class="masthead-brand">REVISTA</h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="<?php echo BASEURL; ?>">Inicio</a></li>
-                <li><a href="<?php echo BASEURL; ?>/view/site/BD.php">Base de Datos</a></li>
+                <li><a href="<?php echo BASEURL; ?>/view/site/BD.php" class="various fancybox.iframe">Base de Datos</a></li>
                 <li><a href="#">Contacto</a></li>
               </ul>
             </div>
           </div>
+
+          

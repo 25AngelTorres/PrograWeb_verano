@@ -6,10 +6,20 @@ $(document).ready(function() {
             $('#list_borrar').hide();
             $('#list_actualizar').hide();
             $('#list_consultar').hide();
+            $('#btn_menos_informacion').hide();
 
             $('#btn_mas_informacion').click(
               function(){
+                $('#btn_mas_informacion').hide();
                 $('#mas_informacion').show('slow');
+                $('#btn_menos_informacion').show('slow');
+              }
+            );
+            $('#btn_menos_informacion').click(
+              function(){
+                $('#btn_menos_informacion').hide();
+                $('#mas_informacion').hide('slow');
+                $('#btn_mas_informacion').show('slow');
               }
             );
 

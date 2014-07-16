@@ -25,6 +25,7 @@
 
             <p class="lead">
               <div class="btn btn-lg btn-default" id="btn_mas_informacion">Leer mas</div>
+              <div class="btn btn-lg btn-default" id="btn_menos_informacion">Leer menos</div>
             </p>
 
           </div>

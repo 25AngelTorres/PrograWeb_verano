@@ -8,7 +8,7 @@
   include ('../../controllers/AutorController.php');
   include ('../../libs/Er.php');
 
-  include ('../layouts/header.php');
+  //include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
     //Inicializar el controlador
@@ -17,6 +17,41 @@
   }
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Revista</title>
+
+<!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Datepicket -->
+       <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
+
+<!-- Bootstrap Validator -->
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
+
+
+
+    
+
+
+  </head>
+
+  <body>
+
+    <div >
+
+      <div>
+
+        <div >
 <!-- header 
 
   <body>
