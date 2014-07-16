@@ -138,6 +138,18 @@ $(document).ready(function() {
                     }
                   }
                 },
+                id_status: {
+                  message: 'Estatus no válido',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                    regexp: {
+                      regexp: /^[0-9]+$/,
+                      message: 'Elige un Estatus. Campo necesario para continuar'
+                    }
+                  }
+                },
                 idcontinente: {
                   message: 'Continente no válido',
                   validators: {

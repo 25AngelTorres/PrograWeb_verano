@@ -105,6 +105,26 @@ class Er {
 			return false;
 		}
 	}
+
+//pdf
+	public function valida_pdf($imagen){
+		$reg="%\.(pdf)$%i";
+		if (preg_match($reg, $imagen)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+//Clave
+	public function valida_clave($valor){
+		$exp_reg = "/^[0-9a-zA-Z_.-]{3,16}$/"; 
+		if (preg_match($exp_reg, $valor)) {
+			 return true;
+		} else { 
+			 return false;
+		} 
+	}
 		
 
 }

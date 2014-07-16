@@ -45,11 +45,11 @@
                     <h4 class="list-group-item-heading">Autor</h4>
                     <p class="list-group-item-text">Inserta dentro de la base de datos un Autor de alguna pubicacion o artículo.</p>
                   </a>
-                  <a href="#" class="list-group-item">
+                  <a href="../revista/form_revista.php" class="list-group-item">
                     <h4 class="list-group-item-heading">Revista</h4>
                     <p class="list-group-item-text">Ingresar dentro de la base de datos una revista.</p>
                   </a>
-                  <a href="#" class="list-group-item">
+                  <a href="../articulo/form_articulo.php" class="list-group-item">
                     <h4 class="list-group-item-heading">Art&iacute;culo</h4>
                     <p class="list-group-item-text">Insertar dentro de la base de datos un art&iacute;culo.</p>
                   </a>
