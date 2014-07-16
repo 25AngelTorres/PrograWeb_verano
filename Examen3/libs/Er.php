@@ -108,7 +108,7 @@ class Er {
 
 //pdf
 	public function valida_pdf($imagen){
-		$reg="%\.(pdf)$%i";
+		$reg="%\.(pdf|PDF)$%i";
 		if (preg_match($reg, $imagen)){
 			return true;
 		} else {

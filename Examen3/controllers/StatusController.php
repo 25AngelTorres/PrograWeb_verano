@@ -28,7 +28,11 @@ Contine las clases
 			//Verificar si existen errores
 			if(count ($status->errores)>0){
 				print_r($status->errores);
+				die();
 			}
+
+			//Insertar en la Base de datos
+			$status->inserta($status->get_atributos());
 
 			//Detener un script *die();
 

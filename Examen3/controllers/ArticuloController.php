@@ -39,7 +39,11 @@ Contine las clases
 			//Verificar si existen errores
 			if(count ($articulo->errores)>0){
 				print_r($articulo->errores);
+				die();
 			}
+
+			//Insertar en la Base de datos
+			$articulo->inserta($articulo->get_atributos());
 
 			//Detener un script *die();
 

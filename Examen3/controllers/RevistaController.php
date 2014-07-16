@@ -38,7 +38,11 @@ Contine las clases
 			//Verificar si existen errores
 			if(count ($revista->errores)>0){
 				print_r($revista->errores);
+				die();
 			}
+
+			//Insertar en la Base de datos
+			$revista->inserta($revista->get_atributos());
 
 			//Detener un script *die();
 

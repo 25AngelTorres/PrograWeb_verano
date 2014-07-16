@@ -30,7 +30,11 @@ Contine las clases
 			//Verificar si existen errores
 			if(count ($autor->errores)>0){
 				print_r($autor->errores);
+				die();
 			}
+
+			//Insertar en la Base de datos
+			$autor->inserta($autor->get_atributos());
 
 			//Detener un script *die();
 
