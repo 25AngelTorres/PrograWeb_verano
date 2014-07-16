@@ -126,6 +126,102 @@ $(document).ready(function() {
                     }
                   }
                 },
+                fecha_creacion: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                    regexp: {
+                      regexp: /^[a-zA-Z0-9_ -ñÑ:\/]+$/,
+                      message: 'Formato no valido'
+                    }
+                  }
+                },
+                archivo_pdf: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                    regexp: {
+                      regexp: /^[a-zA-Z0-9_ -ñÑ.:]+$/,
+                      message: 'Formato de apellido no valido'
+                    }
+                  }
+                },
+                resumen: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                abstract: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                introduccion: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                metodologia: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                contenido: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                conclusiones: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                agradecimientos: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                status: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
+                referencias: {
+                  message: 'Campo requerido para continuar',
+                  validators: {
+                    notEmpty: {
+                      message: 'Campo requerido para continuar'
+                    },
+                  }
+                },
                 email: {
                   message: 'El email no es valido',
                   validators: {

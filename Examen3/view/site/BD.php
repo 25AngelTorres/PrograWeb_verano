@@ -53,8 +53,8 @@
                     <h4 class="list-group-item-heading">Art&iacute;culo</h4>
                     <p class="list-group-item-text">Insertar dentro de la base de datos un art&iacute;culo.</p>
                   </a>
-                  <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">Insertar Status</h4>
+                  <a href="../estatus/form_status.php" class="list-group-item">
+                    <h4 class="list-group-item-heading">Status</h4>
                     <p class="list-group-item-text">Inserta dentro de la base de datos un status.</p>
                   </a>
                 </div>
