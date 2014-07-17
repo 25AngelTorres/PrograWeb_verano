@@ -16,13 +16,15 @@
 
   if(isset($_POST['nombre']))  {
 
-//    echo "<pre>";
-//      print_r($_POST);
-//    echo "</pre>";
+    /*echo "<pre>";
+      print_r($_POST);
+      print_r($_FILES);
+    echo "</pre>";
+    die();*/
 
 //Objeto para controlador de Integrante
     $IntegranteC = new IntegranteController();
-    $IntegranteC->inserta_integrante($_POST);
+    $IntegranteC->inserta_integrante($_POST, $_FILES);
     
     if(isset($_POST['numero'])){
 //Objeto para controlador de Integrante
@@ -48,7 +50,7 @@
 </div>
   <br />
 <div class="row">
-	<form class="form-horizontal" role="form" id='registerForm' method="post"> 
+	<form class="form-horizontal" role="form" id='registerForm' method="post" enctype="multipart/form-data">
 		<div class="col-md-10">
 	        <div class="form-group">
                 <label for="id_nombre_integrante" class="col-sm-4 control-label">Nombre del jugador:</label>

@@ -11,13 +11,14 @@
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
-//    echo "<pre>";
-//      print_r($_POST);
-//    echo "</pre>";
-  
-//Crear objeto del controlador
+  /*echo "<pre>";
+    print_r($_POST);
+    print_r($_FILES); 
+  echo "</pre>";
+  die();*/
+  //Crear objeto del controlador
     $PaisC= new PaisController();
-    $PaisC->inserta_pais($_POST);
+    $PaisC->inserta_pais($_POST, $_FILES);
   }
 
 ?>
@@ -30,7 +31,7 @@
       </div>
       <br />
       <div class="row">
-        <form class="form-horizontal" role="form" id="registerForm" method="post"> 
+        <form class="form-horizontal" role="form" id="registerForm" method="post" enctype="multipart/form-data">
           <div class="col-md-10">
             <div class="form-group">
               <label for="id_nombre_pais" class="col-sm-4 control-label">Nombre del pa&iacute;s:</label>

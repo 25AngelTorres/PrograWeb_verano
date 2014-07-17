@@ -70,12 +70,14 @@ class Pais extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_imagen($valor) ){
-            $this->errores[] = "Esta imagen (".$valor.") no es valida. Formato no valido";
+        if ( !$er->valida_imagen_name($valor['name']) ){
+            $this->errores[] = "Esta imagen (".$valor['name'].") no es valida. Formato no valido";
         }
-
+        if ( !$er->valida_imagen_type($valor['type']) ){
+            $this->errores[] = "Formato de imagen (".$valor['type'].") no valido.";
+        }
         //trim simplemente quita espacios al principio y final
-        $this->bandera = trim($valor);
+        $this->bandera = trim($valor['name']);
 
     }
 

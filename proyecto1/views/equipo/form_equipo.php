@@ -11,9 +11,14 @@
   include ('../layouts/header.php');
 
   if(isset($_POST['nombre']))  {
+    /*echo "<pre>";
+      print_r($_POST);
+      print_r($_FILES);
+    echo "</pre>";
+    die();*/
     //Inicializar el controlador
     $EquipoC = new EquipoController();
-    $EquipoC->inserta_equipo($_POST);
+    $EquipoC->inserta_equipo($_POST,$_FILES);
   }
 
 ?>
@@ -24,7 +29,7 @@
 </div>
 <br />
 <div class="row">
-  <form class="form-horizontal" role="form" id="registerForm" method="post">
+  <form class="form-horizontal" role="form" id="registerForm" method="post" enctype="multipart/form-data">
 	 <div class="col-md-10">
 		<div class="form-group">
 			<label for="id_nombre_posision" class="col-sm-4 control-label">Nombre del equipo: </label>

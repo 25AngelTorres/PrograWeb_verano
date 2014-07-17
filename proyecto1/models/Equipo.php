@@ -75,12 +75,15 @@ class Equipo extends Modelo{
         //objeto de la clase Er
         $er = new Er();
 
-        if ( !$er->valida_imagen($valor) ){
-            $this->errores[] = 'Imagen no valida ('.$valor.'). Formato no aceptado, solo imagenes .gif, .png, jpeg o .jpg';
+        if ( !$er->valida_imagen_name($valor['name']) ){
+            $this->errores[] = 'Imagen no valida ('.$valor["name"].'). Formato no aceptado, solo imagenes .gif, .png, jpeg o .jpg';
+        }
+        if ( !$er->valida_imagen_type($valor['type']) ){
+            $this->errores[] = 'formato no valido ('.$valor["type"].').';
         }
 
         //trim simplemente quita espacios al principio y final de la cadena
-        $this->escudo = trim($valor);
+        $this->escudo = trim($valor['name']);
 
     }
     

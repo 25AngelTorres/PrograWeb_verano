@@ -114,12 +114,14 @@ class Integrante extends Modelo{
         //objeto de la clase Er
         $er = new Er();
 
-        if ( !$er->valida_imagen($valor) ){
-            $this->errores[] = 'Este formato de imagen ('.$valor.'). No es valido';
+        if ( !$er->valida_imagen_name($valor['name']) ){
+            $this->errores[] = 'Este formato de imagen ('.$valor["name"].'). No es valido';
         }
-
+        if ( !$er->valida_imagen_type($valor['type']) ){
+            $this->errores[] = 'Formato de imagen ('.$valor["type"].') no es valido';
+        }
         //trim simplemente quita espacios al principio y final de la cadena
-        $this->foto = trim($valor);
+        $this->foto = trim($valor['name']);
     }
 
 //Edad

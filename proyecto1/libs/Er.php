@@ -1,4 +1,4 @@
-<?php
+// <?php
 
 class Er {
 
@@ -96,14 +96,54 @@ class Er {
 		}
 	}
 
-//Imagen
-	public function valida_imagen($imagen){
-		$reg="%\.(gif|jpe?g|png)$%i";
+//Imagen name
+	public function valida_imagen_name($imagen){
+		$reg="%\.(gif|jpe?g|png|jpg)$%i";
 		if (preg_match($reg, $imagen)){
 			return true;
 		} else {
 			return false;
 		}
+	}
+//Imagen type image/jpeg
+	public function valida_imagen_type($imagen){
+		$reg="/^(image\/)+(gif|jpeg|png|jpg)/";
+		if (preg_match($reg, $imagen)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+//pdf name
+	public function valida_pdf_name($imagen){
+		$reg="%\.(pdf|PDF)$%i";
+		if (preg_match($reg, $imagen)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+//PDF type
+	public function valida_pdf_type($pdf){
+		$reg="/^(application\/pdf)/";
+		if (preg_match($reg, $pdf)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
+//Clave
+	public function valida_clave($valor){
+		$exp_reg = "/^[0-9a-zA-Z_.-]{3,16}$/"; 
+		if (preg_match($exp_reg, $valor)) {
+			 return true;
+		} else { 
+			 return false;
+		} 
 	}
 		
 
