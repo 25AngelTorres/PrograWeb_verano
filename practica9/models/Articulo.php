@@ -81,11 +81,14 @@ class Articulo extends Modelo{
     public function set_archivo_pdf($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_pdf($valor) ){
-            $this->errores[] = 'Formato del archivo no es valido ('.$valor.').';
+        if ( !$er->valida_pdf_name($valor['name']) ){
+            $this->errores[] = 'Formato del archivo no es valido ('.$valor["name"].').';
+        }
+        if ( !$er->valida_pdf_type($valor['type']) ){
+            $this->errores[] = 'Formato del archivo no es valido ('.$valor["type"].').';
         }
         //trim simplemente quita espacios al principio y final de la cadena
-        $this->archivo_pdf = trim($valor);
+        $this->archivo_pdf = trim($valor['name']);
     }
 //id_status
 	public function get_id_status(){

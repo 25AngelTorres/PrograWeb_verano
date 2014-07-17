@@ -12,9 +12,15 @@
 
 
   if(isset($_POST['nombre']))  {
+    /*echo "<pre>";
+      print_r($_POST);
+      print_r($_FILES);
+    echo "</pre>";
+    //die(); */
+
     //Inicializar el controlador
     $ArticuloC = new ArticuloController();
-    $ArticuloC->inserta_articulo($_POST);
+    $ArticuloC->inserta_articulo($_POST, $_FILES);
   }
 
 ?>
@@ -38,10 +44,6 @@
 <!-- Bootstrap Validator -->
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
-
-
-
-    
 
 
   </head>
@@ -72,7 +74,7 @@
                 </div>
               </div>
             </div>
-            <form class="form-horizontal" role="form" id="registerForm" method="POST">
+            <form class="form-horizontal" role="form" id="registerForm" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6">
                 

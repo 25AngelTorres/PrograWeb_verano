@@ -13,19 +13,21 @@ Contine las clases
 		}
 
 		//Funcion para insertar un articulo
-		public function inserta_articulo($datos){
+		public function inserta_articulo($datos, $files){
 			//Solo es para acegurarse que se estan enviando los archivos
 		    echo "<pre>";
 		      print_r($datos);
+		      print_r($files);
 		      echo   'Desde Controller';
 
 		    echo "</pre>";
+
 			//Conexion con Equipo el cual continene Modelo y Conexion
 			$articulo=new Articulo();
 
 			$articulo->set_nombre($datos['nombre']);
 			$articulo->set_fecha_creacion($datos['fecha_creacion']);
-			$articulo->set_archivo_pdf($datos['archivo_pdf']);
+			$articulo->set_archivo_pdf($files['archivo_pdf']);
 			$articulo->set_id_status($datos['id_status']);
 			$articulo->set_resumen($datos['resumen']);
 			$articulo->set_abstract($datos['abstract']);
@@ -36,11 +38,17 @@ Contine las clases
 			$articulo->set_agradecimientos($datos['agradecimientos']);
 			$articulo->set_referencias($datos['referencias']);
 
+			
+
 			//Verificar si existen errores
 			if(count ($articulo->errores)>0){
 				print_r($articulo->errores);
 				die();
 			}
+			else{
+				move_uploaded_file($files['archivo_pdf']['tmp_name'], "../document/".$files['archivo_pdf']['name']);
+			}
+			
 
 			//Insertar en la Base de datos
 			$articulo->inserta($articulo->get_atributos());

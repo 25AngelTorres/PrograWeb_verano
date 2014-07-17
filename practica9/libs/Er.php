@@ -96,8 +96,8 @@ class Er {
 		}
 	}
 
-//Imagen
-	public function valida_imagen($imagen){
+//Imagen name
+	public function valida_imagen_name($imagen){
 		$reg="%\.(gif|jpe?g|png|jpg)$%i";
 		if (preg_match($reg, $imagen)){
 			return true;
@@ -105,9 +105,18 @@ class Er {
 			return false;
 		}
 	}
+//Imagen type image/jpeg
+	public function valida_imagen_type($imagen){
+		$reg="/^(image\/)+(gif|jpeg|png|jpg)/";
+		if (preg_match($reg, $imagen)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-//pdf
-	public function valida_pdf($imagen){
+//pdf name
+	public function valida_pdf_name($imagen){
 		$reg="%\.(pdf|PDF)$%i";
 		if (preg_match($reg, $imagen)){
 			return true;
@@ -115,6 +124,17 @@ class Er {
 			return false;
 		}
 	}
+
+//PDF type
+	public function valida_pdf_type($pdf){
+		$reg="/^(application\/pdf)/";
+		if (preg_match($reg, $pdf)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 
 //Clave
 	public function valida_clave($valor){

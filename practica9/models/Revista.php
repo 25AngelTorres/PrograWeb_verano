@@ -66,8 +66,11 @@ class Revista extends Modelo{
     public function set_portada($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_imagen($valor['name'])){
-            $this->errores[] = 'Formato de imagen no valido ('.$valor.').';
+        if ( !$er->valida_imagen_name($valor['name'])){
+            $this->errores[] = 'Formato de imagen no valido ('.$valor["name"].').';
+        }
+         if ( !$er->valida_imagen_type($valor['type'])){
+            $this->errores[] = 'Formato de imagen no valido ('.$valor["type"].').';
         }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->portada = trim($valor['name']);
