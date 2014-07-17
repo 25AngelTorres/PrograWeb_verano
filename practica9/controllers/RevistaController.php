@@ -48,18 +48,16 @@ Contine las clases
 				print_r($revista->errores);
 				die();
 			}
-
 			else{
 				//Copiar la direccion del archivo a un nueva carpeta
-				move_uploaded_file($portada_tmp_name, "../imagen/".$portada_name);
-
-			}
+				move_uploaded_file($files['portada']['tmp_name'], "../imagen/".$files['portada']['name']);
+			};
 
 
 			
 
 			//Insertar en la Base de datos
-			//$revista->inserta($revista->get_atributos());
+			$revista->inserta($revista->get_atributos());
 
 			//Detener un script *die();
 
