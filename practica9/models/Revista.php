@@ -72,6 +72,10 @@ class Revista extends Modelo{
          if ( !$er->valida_imagen_type($valor['type'])){
             $this->errores[] = 'Formato de imagen no valido ('.$valor["type"].').';
         }
+        
+         if ( $valor['size']>500000){
+            $this->errores[] = 'Tamaño de imagen ('.$valor["size"].'). Sobrepasa el tamaño maximo';
+        }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->portada = trim($valor['name']);
     }

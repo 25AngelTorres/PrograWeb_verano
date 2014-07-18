@@ -114,6 +114,15 @@ class Er {
 			return false;
 		}
 	}
+//Imagen_tamaño
+		public function valida_imagen_size($imagen){
+/*/		$reg="/^(image\/)+(gif|jpeg|png|jpg)/";
+		if ($imagen<510000)){
+			return true;
+		} else {
+			return false;
+		}*/
+	}
 
 //pdf name
 	public function valida_pdf_name($imagen){
