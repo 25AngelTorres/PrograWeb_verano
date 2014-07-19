@@ -10,13 +10,14 @@
 
   include ('../layouts/header.php');
 
+//    Inicializar el controlador
+$EstadioC = new EstadioController();
   if(isset($_POST['Nombre']))  {
 //  echo "<pre>";
 //      print_r($_POST);
 //    echo "</pre>";
 
-//    Inicializar el controlador
-    $EstadioC = new EstadioController();
+
     $EstadioC->inserta_estadio($_POST);
   }
 ?>
@@ -27,13 +28,16 @@
         </div>
       </div>
       <br />
+      <?php
+        $EstadioC->errores();
+      ?>
     <div class="row">
       <form class="form-horizontal" role="form" id="registerForm" method="post">
         <div class="col-md-10">
             <div class="form-group">
               <label for="id_nombre_estadio" class="col-sm-4 control-label">Nombre del estadio: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_nombre_estadio" placeholder="Nombre del estadio" name="Nombre">
+                <input type="text" class="form-control" id="id_nombre_estadio" placeholder="Nombre del estadio" name="Nombre" value=" <?php echo $EstadioC->get_nombre(); ?>" />
               </div>
             </div>
 

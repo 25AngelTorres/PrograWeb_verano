@@ -3,13 +3,12 @@
 Contine las clases 
 */
 
-//	class EquipoController extends Equipo{
-	class EstadioController {
+class EstadioController extends Estadio{
 		
 		//Instancia de la clase Estadio----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Estadio();
 		}
 
 		//Funcion para insertar un equipo
@@ -21,18 +20,32 @@ Contine las clases
 		    echo "</pre>";
 
 			//Conexion con Estadio el cual continene a Modelo y Conexion
-			$estadio=new Estadio();
+			//$estadio=new Estadio();
 
-			$estadio->set_nombre($datos['Nombre']);
-			$estadio->set_idciudad($datos['idciudad']);
+			$this->set_nombre($datos['Nombre']);
+			$this->set_idciudad($datos['idciudad']);
 
 			//Verificar si existen errores
-			if(count ($estadio->errores)>0){
-				print_r($estadio->errores);
+			if(count ($this->errores)>0){
+				$this->muestra_errores=true;
+			}
+			else{
+			//Insertar en la Base de datos
+				$this->inserta($this->get_atributos());
+				echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
+				}
+				//Detener un script *die();
+
 			}
 
-			//Detener un script *die();
-
-		}
+			public function errores(){
+				if ($this->muestra_errores) {
+					echo '<div class="alert alert-danger">';
+	                	foreach ($this->errores as $value) {
+	                  	echo "<p>".$value."</p>";
+	                	}  
+	            	echo '</div>';
+				}
+			}
 	}
 ?>

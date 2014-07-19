@@ -14,6 +14,13 @@
 
   include ('../layouts/header.php');
 
+  //Objeto para controlador de Integrante
+    $IntegranteC = new IntegranteController();
+  //Objeto para controlador de Integrante
+      $JugadorC = new JugadorController();
+  //Objeto para controlador de Integrante
+      $EntrenadorC = new EntrenadorController();
+
   if(isset($_POST['nombre']))  {
 
     /*echo "<pre>";
@@ -22,19 +29,13 @@
     echo "</pre>";
     die();*/
 
-//Objeto para controlador de Integrante
-    $IntegranteC = new IntegranteController();
     $IntegranteC->inserta_integrante($_POST, $_FILES);
     
     if(isset($_POST['numero'])){
-//Objeto para controlador de Integrante
-      $JugadorC = new JugadorController();
       $JugadorC->inserta_jugador($_POST);
     }
     
     if($_POST['idpais']>'0'){
-//Objeto para controlador de Integrante
-      $EntrenadorC = new EntrenadorController();
       $EntrenadorC->inserta_entrenador($_POST);
     }
 
@@ -49,20 +50,25 @@
     </div>
 </div>
   <br />
+  <?php
+    $IntegranteC->errores();
+    $JugadorC->errores();
+    $EntrenadorC->errores();
+  ?>
 <div class="row">
 	<form class="form-horizontal" role="form" id='registerForm' method="post" enctype="multipart/form-data">
 		<div class="col-md-10">
 	        <div class="form-group">
                 <label for="id_nombre_integrante" class="col-sm-4 control-label">Nombre del jugador:</label>
             	    <div class="col-sm-8">
-                        <input type="text" class="form-control" id="id_nombre_integrante" placeholder="Nombre del integrante" name="nombre">
+                        <input type="text" class="form-control" id="id_nombre_integrante" placeholder="Nombre del integrante" name="nombre" value="<?php echo $IntegranteC->get_nombre(); ?>" />
                   	</div>
              </div>
                  
             <div class="form-group">
                 <label for="id_apellido_integrante" class="col-sm-4 control-label">Apellido del jugador:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="id_apellido_integrante" placeholder="Apellido del integrante" name="apellido">
+                    <input type="text" class="form-control" id="id_apellido_integrante" placeholder="Apellido del integrante" name="apellido" value="<?php echo $IntegranteC->get_apellido(); ?>" />
                   </div>
             </div>
                  
@@ -70,28 +76,28 @@
             <div class="form-group">
             	<label for="id_edad_integrante" class="col-sm-4 control-label">Edad:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="id_Edad_integrante" placeholder="Edad" name="Edad">
+                    <input type="text" class="form-control" id="id_Edad_integrante" placeholder="Edad" name="Edad" value="<?php echo $IntegranteC->get_Edad(); ?>" />
                   </div>
             </div>
                  
             <div class="form-group">
     	        <label for="id_estatura_integrante" class="col-sm-4 control-label">Estatura:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="id_estatura_integrante" placeholder="Estatura del integrante" name="estatura">
+                    <input type="text" class="form-control" id="id_estatura_integrante" placeholder="Estatura del integrante" name="estatura" value="<?php echo $IntegranteC->get_estatura(); ?>" />
                   </div>
             </div>	
                  
             <div class="form-group">
                 <label for="id_peso_integrante" class="col-sm-4 control-label">Peso:</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="id_peso_integrante" placeholder="Peso del integrante" name="peso">
+                    <input type="text" class="form-control" id="id_peso_integrante" placeholder="Peso del integrante" name="peso" value="<?php echo $IntegranteC->get_peso(); ?>" />
                   </div>
             </div>
         
             <div class="form-group">
                 <label for="id_foto_integrante" class="col-sm-4 control-label">Foto: </label>
                   <div class="col-sm-8">
-                    <input type="file" class="form-control" id="id_foto_integrante" name="foto">
+                    <input type="file" class="form-control" id="id_foto_integrante" name="foto" value="<?php echo $IntegranteC->get_foto(); ?>" />
                   </div>
             </div>
                   
@@ -118,7 +124,7 @@
               <div class="form-group">
                     <label for="id_numero_jugador" class="col-sm-4 control-label">N&uacute;mero del jugador:</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="id_numero_jugador" placeholder="N&uacute;mero del jugador" name="numero">
+                        <input type="text" class="form-control" id="id_numero_jugador" placeholder="N&uacute;mero del jugador" name="numero" value="<?php echo $JugadorC->get_numero(); ?>" />
                       </div>
                  </div>
 

@@ -10,13 +10,12 @@
 
   include ('../layouts/header.php');
 
+//Crear objeto del controlador
+  $ContinenteC = new ContinenteController();
   if(isset($_POST['nombre']))  {
 //    echo "<pre>";
 //      print_r($_POST);
 //    echo "</pre>";
-
-//Crear objeto del controlador
-  $ContinenteC = new ContinenteController();
   $ContinenteC->inserta_continente($_POST);
   }
 
@@ -30,13 +29,16 @@
         </div>
       </div>
       <br />
+      <?php
+          $ContinenteC->errores();
+      ?>
       <div class="row">
         <form class="form-horizontal" role="form" id="registerForm" method="post">
           <div class="col-md-10">
             <div class="form-group">
               <label for="id_nombre_continente" class="col-sm-4 control-label">Nombre del continente: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_nombre_continente" placeholder="Nombre del continente" name="nombre">
+                <input type="text" class="form-control" id="id_nombre_continente" placeholder="Nombre del continente" name="nombre" value="<?php echo $ContinenteC->get_nombre(); ?>">
               </div>
             </div>
             

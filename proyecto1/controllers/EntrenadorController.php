@@ -3,13 +3,12 @@
 Contine las clases 
 */
 
-//	class EntrenadorController extends Equipo{
-	class EntrenadorController {
+	class EntrenadorController extends Entrenador{
 		
 		//Instancia de la clase Posision----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Entrenador();
 		}
 
 		//Funcion para insertar un equipo
@@ -21,17 +20,31 @@ Contine las clases
 		    echo "</pre>";
 
 			//Conexion con Posision el cual continene a Modelo y Conexion
-			$entrenador=new Entrenador();
+			//$entrenador=new Entrenador();
 
-			$entrenador->set_idpais($datos['idpais']);
+			$this->set_idpais($datos['idpais']);
 
 			//Verificar si existen errores
-			if(count ($entrenador->errores)>0){
-				print_r($entrenador->errores);
+			if(count ($this->errores)>0){
+				$this->muestra_errores=true;
+			}
+			else{
+			//Insertar en la Base de datos
+				$this->inserta($this->get_atributos());
+				echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
+				}
+				//Detener un script *die();
+
 			}
 
-			//Detener un script *die();
-
-		}
+			public function errores(){
+				if ($this->muestra_errores) {
+					echo '<div class="alert alert-danger">';
+	                	foreach ($this->errores as $value) {
+	                  	echo "<p>".$value."</p>";
+	                	}  
+	            	echo '</div>';
+				}
+			}
 	}
 ?>

@@ -10,14 +10,15 @@
 
   include ('../layouts/header.php');
 
+//Crear objeto del controlador
+    $PaisC= new PaisController();
   if(isset($_POST['nombre']))  {
   /*echo "<pre>";
     print_r($_POST);
     print_r($_FILES); 
   echo "</pre>";
   die();*/
-  //Crear objeto del controlador
-    $PaisC= new PaisController();
+  
     $PaisC->inserta_pais($_POST, $_FILES);
   }
 
@@ -30,13 +31,16 @@
         </div>
       </div>
       <br />
+      <?php
+        $PaisC->errores();
+      ?>
       <div class="row">
         <form class="form-horizontal" role="form" id="registerForm" method="post" enctype="multipart/form-data">
           <div class="col-md-10">
             <div class="form-group">
               <label for="id_nombre_pais" class="col-sm-4 control-label">Nombre del pa&iacute;s:</label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_nombre_pais" placeholder="Nombre del pa&iacute;s" name="nombre">
+                <input type="text" class="form-control" id="id_nombre_pais" placeholder="Nombre del pa&iacute;s" name="nombre" value="<?php echo $PaisC->get_nombre(); ?>" />
               </div>
             </div>
 
@@ -54,7 +58,7 @@
             <div class="form-group">
               <label for="id_bandera_continente" class="col-sm-4 control-label">Bandera: </label>
               <div class="col-sm-8">
-                <input type="file" class="form-control" id="id_bandera_pais" name="bandera">
+                <input type="file" class="form-control" id="id_bandera_pais" name="bandera" value="<?php echo $PaisC->get_bandera(); ?>">
               </div>
             </div>
 

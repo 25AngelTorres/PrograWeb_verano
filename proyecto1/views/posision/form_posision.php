@@ -10,13 +10,13 @@
 
   include ('../layouts/header.php');
 
+//Inicializar el controlador
+    $PosisionC = new PosisionController();
   if(isset($_POST['nombre']))  {
 //    echo "<pre>";
 //      print_r($_POST);
 //    echo "</pre>";
 
-//Inicializar el controlador
-    $PosisionC = new PosisionController();
     $PosisionC->inserta_posision($_POST);
   }
 
@@ -28,20 +28,23 @@
         </div>
       </div>
       <br />
+      <?php
+        $PosisionC->errores();
+      ?>
       <div class="row">
         <form class="form-horizontal" role="form" id="registerForm" method="post">
           <div class="col-md-10">
             <div class="form-group">
               <label for="id_nombre_posision" class="col-sm-4 control-label">Nombre de la posicion: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_nombre_posision" placeholder="Nombre de la posision" name="nombre">
+                <input type="text" class="form-control" id="id_nombre_posision" placeholder="Nombre de la posision" name="nombre" value="<?php echo $PosisionC->get_nombre(); ?>">
               </div>
             </div>
 
             <div class="form-group">
               <label for="id_abreviatura_posision" class="col-sm-4 control-label">Abreviatura: </label>
               <div class="col-sm-8">
-                <input type="text" class="form-control" id="id_abreviatura_posision" placeholder="Abreviatura de la posision" name="abreviatura">
+                <input type="text" class="form-control" id="id_abreviatura_posision" placeholder="Abreviatura de la posision" name="abreviatura" value="<?php echo $PosisionC->get_abreviatura(); ?>">
               </div>
             </div>
           </div>

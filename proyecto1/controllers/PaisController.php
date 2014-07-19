@@ -4,12 +4,12 @@ Contine las clases
 */
 
 //	class PaisController extends Equipo{
-	class PaisController {
+	class PaisController extends Pais{
 		
 		//Instancia de la clase Pais----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Pais();
 		}
 
 		//Funcion para insertar un pais
@@ -22,27 +22,35 @@ Contine las clases
 		    echo "</pre>";
 		    //die();
 			//Conexion con Posision el cual continene a Modelo y Conexion
-			$pais=new Pais();
+			//$pais=new Pais();
 
-			$pais->set_nombre($datos['nombre']);
-			$pais->set_idcontinente($datos['idcontinente']);
-			$pais->set_bandera($files['bandera']);
+			$this->set_nombre($datos['nombre']);
+			$this->set_idcontinente($datos['idcontinente']);
+			$this->set_bandera($files['bandera']);
 
 
 			//Verificar si existen errores
-			if(count ($pais->errores)>0){
-				print_r($pais->errores);
-				die();
+			if(count ($this->errores)>0){
+				$this->muestra_errores=true;
 			}
 			else{
 				move_uploaded_file($files['bandera']['tmp_name'], "../image/".$files['bandera']['name']);
+				//Insertar en la base de datos
+				$this->inserta($this->get_atributos());
+				echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
+				}
+				//Detener un script *die();
+
 			}
 
-			//Detener un script *die();
-			
-			//Insertar en la base de datos
-			$pais->inserta($pais->get_atributos());
-
-		}
+			public function errores(){
+				if ($this->muestra_errores) {
+					echo '<div class="alert alert-danger">';
+	                	foreach ($this->errores as $value) {
+	                  	echo "<p>".$value."</p>";
+	                	}  
+	            	echo '</div>';
+				}
+			}
 	}
 ?>

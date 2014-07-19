@@ -10,14 +10,15 @@
 
   include ('../layouts/header.php');
 
+//Inicializar el controlador
+    $EquipoC = new EquipoController();
   if(isset($_POST['nombre']))  {
     /*echo "<pre>";
       print_r($_POST);
       print_r($_FILES);
     echo "</pre>";
     die();*/
-    //Inicializar el controlador
-    $EquipoC = new EquipoController();
+    
     $EquipoC->inserta_equipo($_POST,$_FILES);
   }
 
@@ -28,13 +29,16 @@
 	</div>
 </div>
 <br />
+<?php
+  $EquipoC->errores();
+?>
 <div class="row">
   <form class="form-horizontal" role="form" id="registerForm" method="post" enctype="multipart/form-data">
 	 <div class="col-md-10">
 		<div class="form-group">
 			<label for="id_nombre_posision" class="col-sm-4 control-label">Nombre del equipo: </label>
 			<div class="col-sm-8">
-				<input type="text" class="form-control" id="id_nombre_posision" placeholder="Nombre del equipo" name="nombre">
+				<input type="text" class="form-control" id="id_nombre_posision" placeholder="Nombre del equipo" name="nombre" value="<?php echo $EquipoC->get_nombre(); ?>" />
 			</div>
 		</div>
 
@@ -52,7 +56,7 @@
         <div class="form-group">
           	<label for="id_escudo_equipo" class="col-sm-4 control-label">Escudo: </label>
           	<div class="col-sm-8">
-            	<input type="file" class="form-control" id="id_escudo_equipo" name="escudo">
+            	<input type="file" class="form-control" id="id_escudo_equipo" name="escudo" value="<?php echo $EquipoC->get_escudo();?>" />
           	</div>
         </div>
     </div>    

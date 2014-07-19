@@ -3,13 +3,13 @@
 Contine las clases 
 */
 
-//	class ContinenteController extends Equipo{
-	class ContinenteController {
+class ContinenteController extends Continente{
+	
 		
 		//Instancia de la clase Posision----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Continente();
 		}
 
 		//Funcion para insertar un equipo
@@ -21,17 +21,31 @@ Contine las clases
 		    echo "</pre>";
 
 			//Conexion con Posision el cual continene a Modelo y Conexion
-			$continente=new Continente();
+			//$continente=new Continente();
 
-			$continente->set_nombre($datos['nombre']);
+			$this->set_nombre($datos['nombre']);
 
 			//Verificar si existen errores
-			if(count ($continente->errores)>0){
-				print_r($continente->errores);
+			if(count ($this->errores)>0){
+				$this->muestra_errores=true;
+			}
+			else{
+			//Insertar en la Base de datos
+				$this->inserta($this->get_atributos());
+				echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
+				}
+				//Detener un script *die();
+
 			}
 
-			//Detener un script *die();
-
-		}
+			public function errores(){
+				if ($this->muestra_errores) {
+					echo '<div class="alert alert-danger">';
+	                	foreach ($this->errores as $value) {
+	                  	echo "<p>".$value."</p>";
+	                	}  
+	            	echo '</div>';
+				}
+			}
 	}
 ?>

@@ -44,7 +44,7 @@ class Er {
 
 //Nombre	
 	public function valida_nombre($valor){
-		$exp_reg = "/^[a-zA-Z_]{3,16}$/"; 
+		$exp_reg = "/^[a-zA-Z_ñÑ -]{3,25}$/"; 
 		if (preg_match($exp_reg, $valor)) {
 			 return true;
 		} else { 
