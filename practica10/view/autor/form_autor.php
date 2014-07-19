@@ -10,9 +10,9 @@
 
   //include ('../layouts/header.php');
 
+//Inicializar el controlador
+  $AutorC = new AutorController();
   if(isset($_POST['nombre']))  {
-    //Inicializar el controlador
-    $AutorC = new AutorController();
     $AutorC->inserta_Autor($_POST);
   }
 
@@ -38,9 +38,6 @@
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
 
-
-
-    
 
 
   </head>
@@ -71,6 +68,10 @@
                 </div>
               </div>
             </div>
+<!-- Errores -->
+          <?php
+            $AutorC->errores();
+          ?>
             <div class="row">
               <div class="col-md-12">
                 <form class="form-horizontal" role="form" id="registerForm" method="POST">
@@ -78,21 +79,21 @@
                   <div class="form-group">
                     <label for="autor_nombre" class="col-sm-4 control-label"> Nombre del autor: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" id="autor_nombre" placeholder="Nombre del autor" name="nombre">
+                      <input type="text" class="form-control" id="autor_nombre" placeholder="Nombre del autor" name="nombre" value="<?php echo $AutorC->get_nombre(); ?>" >
                     </div>
                   </div>
 <!-- Apellido -->
                   <div class="form-group">
                     <label for="autor_apellido" class="col-sm-4 control-label"> Apellido del autor: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" id="autor_apellido" placeholder="Apellido del autor" name="apellido">
+                      <input type="text" class="form-control" id="autor_apellido" placeholder="Apellido del autor" name="apellido" value="<?php echo $AutorC->get_apellido(); ?>" >
                     </div>
                   </div>
 <!-- Email -->
                   <div class="form-group">
                     <label for="autor_email" class="col-sm-4 control-label"> Email del autor: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" id="autor_Email" placeholder="Email del autor" name="email">
+                      <input type="text" class="form-control" id="autor_Email" placeholder="Email del autor" name="email" value="<?php echo $AutorC->get_email(); ?>" >
                     </div>
                   </div>
 

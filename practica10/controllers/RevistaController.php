@@ -7,7 +7,6 @@ Contine las clases
 		
 		//Instancia de la clase Revista----No necesario para todos los controladores
 		public $muestra_errores = false;
-		public $err;
 		function __construct(){
 			 parent::Revista();
 		}
@@ -56,11 +55,21 @@ Contine las clases
 				move_uploaded_file($files['portada']['tmp_name'], "../imagen/".$files['portada']['name']);
 				//Insertar en la Base de datos
 				$this->inserta($this->get_atributos());
+				echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
 			};
 
 			//Detener un script *die();
 		}
 
+		public function errores(){
+			if ($this->muestra_errores) {
+				echo '<div class="alert alert-danger">';
+                	foreach ($this->errores as $value) {
+                  	echo "<p>".$value."</p>";
+                	}  
+            	echo '</div>';
+			}
+		}
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

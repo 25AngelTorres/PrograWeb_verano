@@ -72,23 +72,14 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="page-header">
-                  <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Autor <small>Insertar</small></h1>
+                  <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Revista <small>Insertar</small></h1>
                 </div>
               </div>
             </div>
+
 <!-- Errores -->
           <?php
-            if ($RevistaC->muestra_errores) { 
-          ?>
-            <div class="alert alert-danger">
-              <?php
-                foreach ($RevistaC->errores as $value) {
-                  echo "<p>".$value."</p>";
-                }
-              ?>
-            </div>
-          <?php
-            }
+            $RevistaC->errores();
           ?>
 <!-- Crer una clase -->
 
@@ -100,7 +91,7 @@
                   <div class="form-group">
                     <label for="revista_titulo" class="col-sm-3 control-label">Titulo:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="titulo" id="revista_titulo" placeholder="Titulo de la revista" />
+                      <input type="text" class="form-control" name="titulo" id="revista_titulo" placeholder="Titulo de la revista" value="<?php echo $RevistaC->get_titulo(); ?>" />
                     </div>
                   </div>
 <!-- Subtitulo -->
@@ -114,7 +105,7 @@
                   <div class="form-group">
                     <label for="revista_portada" class="col-sm-3 control-label">Portada:</label>
                     <div class="col-sm-6">
-                      <input type="file" class="form-control" name="portada" id="revista_portada" />
+                      <input type="file" class="form-control" name="portada" id="revista_portada" value="<?php echo $RevistaC->get_portada(); ?>" />
                     </div>
                   </div>
 <!-- Fecha -->
@@ -122,21 +113,21 @@
                     <label for="datetimepicker6" class="col-sm-3 control-label">Fecha: </label>
                   <!-- Ejemplo 6 de Boostrap datetimepicker -->
                     <div class='col-sm-6'>
-                      <input type='text' class="form-control" id='datetimepicker6' name="fecha"/>
+                      <input type='text' class="form-control" id='datetimepicker6' name="fecha" value="<?php echo $RevistaC->get_fecha(); ?>"/>
                     </div>
                   </div>
 <!-- Numero -->
                   <div class="form-group">
                     <label for="revista_numero" class="col-sm-3 control-label">N&uacute;mero: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="numero" id="revista_numero" placeholder="Numero" />
+                      <input type="text" class="form-control" name="numero" id="revista_numero" placeholder="Numero" value="<?php echo $RevistaC->get_numero(); ?>" />
                     </div>
                   </div>
 <!-- Volumen -->
                   <div class="form-group">
                     <label for="revista_volumen" class="col-sm-3 control-label">Volumen: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="volumen" id="revista_volumen" placeholder="Volumen de la revista" />
+                      <input type="text" class="form-control" name="volumen" id="revista_volumen" placeholder="Volumen de la revista" value="<?php echo $RevistaC->get_volumen(); ?>" />
                     </div>
                   </div>
                 </div>
@@ -145,28 +136,28 @@
                   <div class="form-group">
                     <label for="revista_clave" class="col-sm-3 control-label">Clave: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="clave" id="revista_clave" placeholder="Clave de la revista" />
+                      <input type="text" class="form-control" name="clave" id="revista_clave" placeholder="Clave de la revista" value="<?php echo $RevistaC->get_clave(); ?>" />
                     </div>
                   </div>
 <!-- Nombre -->
                   <div class="form-group">
                     <label for="revista_nombre" class="col-sm-3 control-label">Nombre: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="nombre" id="revista_nombre" placeholder="Nombre de la revista" />
+                      <input type="text" class="form-control" name="nombre" id="revista_nombre" placeholder="Nombre de la revista" value="<?php echo $RevistaC->get_nombre(); ?>" />
                     </div>
                   </div>
 <!-- Editorial -->    
                   <div class="form-group">
                     <label for="revista_editorial" class="col-sm-3 control-label">Editorial: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="editorial" id="revista_editorial" placeholder="Editorial de la revista" />
+                      <input type="text" class="form-control" name="editorial" id="revista_editorial" placeholder="Editorial de la revista" value="<?php echo $RevistaC->get_editorial(); ?>" />
                     </div>
                   </div>
 <!-- Directorio -->
                   <div class="form-group">
                     <label for="revista_directorio" class="col-sm-3 control-label">Directorio: </label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="directorio" id="revista_directorio" placeholder="Directorio de la Revista" />
+                      <input type="text" class="form-control" name="directorio" id="revista_directorio" placeholder="Directorio de la Revista" value="<?php echo $RevistaC->get_directorio(); ?>" />
                     </div>
                   </div>
 <!-- Status -->

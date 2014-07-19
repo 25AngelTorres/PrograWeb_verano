@@ -10,10 +10,9 @@
 
   //include ('../layouts/header.php');
 
-
-  if(isset($_POST['status']))  {
-    //Inicializar el controlador
-    $StatusC = new StatusController();
+//Inicializar el controlador
+  $StatusC = new StatusController();
+  if(isset($_POST['status']))  {  
     $StatusC->inserta_status($_POST);
   }
 
@@ -39,10 +38,6 @@
 <!-- Bootstrap Validator -->
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
-
-
-
-    
 
 
   </head>
@@ -74,6 +69,10 @@
                 </div>
               </div>
             </div>
+<!-- Errores -->
+          <?php
+            $StatusC->errores();
+          ?>
             <form class="form-horizontal" role="form" id="registerForm" method="POST">
               <div class="row">
                 <div class="col-md-12"> 
@@ -81,7 +80,7 @@
                   <div class="form-group">
                     <label for="status_estatus" class="col-sm-3 control-label">Estatus:</label>
                     <div class="col-sm-6">
-                      <input type="text" class="form-control" name="status" id="status_estatus" placeholder="Estatus del art&iacute;culo" />
+                      <input type="text" class="form-control" name="status" id="status_estatus" placeholder="Estatus del art&iacute;culo" value="<?php echo $StatusC->get_status(); ?>" />
                     </div>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ Contine las clases
 		//Instancia de la clase Autor----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Autor();
 		}
 
 		//Funcion para insertar un equipo
@@ -20,27 +20,35 @@ Contine las clases
 
 		    echo "</pre>";
 			//Conexion con Equipo el cual continene Modelo y Conexion
-			$autor=new Autor();
+			//$autor=new Autor();
 
-			$autor->set_nombre($datos['nombre']);
-			$autor->set_apellido($datos['apellido']);
-			$autor->set_email($datos['email']);
+			$this->set_nombre($datos['nombre']);
+			$this->set_apellido($datos['apellido']);
+			$this->set_email($datos['email']);
 
 			//Verificar si existen errores
-			if(count ($autor->errores)>0){
+			if(count ($this->errores)>0){
 				$this->muestra_errores=true;
 				/*print_r($autor->errores);
 				die();*/
 			}
-			else{}
+			else{
 			//Insertar en la Base de datos
-			$autor->inserta($autor->get_atributos());
+			$this->inserta($this->get_atributos());
+			echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
+					
 			}
-
-			//Detener un script *die();
-
 		}
 
+		public function errores(){
+			if ($this->muestra_errores) {
+				echo '<div class="alert alert-danger">';
+                	foreach ($this->errores as $value) {
+                  	echo "<p>".$value."</p>";
+                	}  
+            	echo '</div>';
+			}
+		}
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

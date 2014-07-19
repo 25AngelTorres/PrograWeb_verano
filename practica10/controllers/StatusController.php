@@ -8,7 +8,7 @@ Contine las clases
 		//Instancia de la clase Status----No necesario para todos los controladores
 		public $muestra_errores = false;
 		function __construct(){
-			 //parent::Equipo();
+			 parent::Status();
 		}
 
 		//Funcion para insertar un status
@@ -20,22 +20,33 @@ Contine las clases
 
 		    echo "</pre>";
 			//Conexion con Equipo el cual continene Modelo y Conexion
-			$status=new Status();
+			//$status=new Status();
 
-			$status->set_status($datos['status']);
+			$this->set_status($datos['status']);
 			
 			//Verificar si existen errores
-			if(count ($status->errores)>0){
+			if(count ($this->errores)>0){
 				$this->muestra_errores=true;
 				/*print_r($status->errores);
 				die();*/
 			}
 			else{
 			//Insertar en la Base de datos
-			$status->inserta($status->get_atributos());
+			$this->inserta($this->get_atributos());
+			echo '<div class="alert alert-success" role="alert">Insercion Correcta</div>';
 			}
 			//Detener un script *die();
 
+		}
+
+		public function errores(){
+			if ($this->muestra_errores) {
+				echo '<div class="alert alert-danger">';
+                	foreach ($this->errores as $value) {
+                  	echo "<p>".$value."</p>";
+                	}  
+            	echo '</div>';
+			}
 		}
 
 		/*public function validaUsuario($datos){

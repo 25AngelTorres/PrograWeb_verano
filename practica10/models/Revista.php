@@ -114,15 +114,15 @@ class Revista extends Modelo{
     public function set_titulo($valor){
         //objeto de la clase Er
         $er = new Er();
-        /*if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = 'Formato de fecha no valido ('.$valor.').';
-        }*/
+        if ( !$er->valida_nombre($valor) ){
+            $this->errores[] = 'Formato de titulo no valido ('.$valor.').';
+        }
         //trim simplemente quita espacios al principio y final de la cadena
-        $this->fecha = trim($valor);
+        $this->titulo = trim($valor);
     }
 //Subtitulo
 	public function get_subtitulo(){
-        return $this->ubtitulo;
+        return $this->subtitulo;
     } 
     public function set_subtitulo($valor){
         //objeto de la clase Er

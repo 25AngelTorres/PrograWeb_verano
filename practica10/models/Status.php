@@ -33,10 +33,10 @@ class Status extends Modelo{
     public function set_status($valor){
         //objeto de la clase Er
         $er = new Er();
-        /*
+        
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = 'Nombre no valido ('.$valor.').';
-        }*/
+        }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->status = trim($valor);
     }
