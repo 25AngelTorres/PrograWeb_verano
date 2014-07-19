@@ -1,5 +1,14 @@
-<!--FOOTER------------------->
+<!--FOOTER-------------------->
 
+<div class="row">
+    <div class="col-md-12">
+        <pre>
+            <?php
+                print_r($_SESSION);
+            ?>
+        <pre>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../js/jquery.min.js"></script>

@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost:8080/PWeb/PrograWeb_verano/practica9');
+  define('BASEURL','http://localhost:8080/PWeb/PrograWeb_verano/practica10');
 ?>
 
 <!DOCTYPE html>
@@ -65,8 +65,24 @@
               <h3 class="masthead-brand">REVISTA</h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="<?php echo BASEURL; ?>">Inicio</a></li>
-                <li><a href="<?php echo BASEURL; ?>/view/site/BD.php" class="various fancybox.iframe">Base de Datos</a></li>
+                <?php
+                  if(isset($_SESSION['user'])){
+                
+                  echo  "<li><a href='".BASEURL."/view/site/BD.php' class='various fancybox.iframe'>Base de Datos</a></li>";
+                
+                  }
+                ?>
                 <li><a href="#">Contacto</a></li>
+                <?php
+                  if(!isset($_SESSION['user'])){
+                  echo "<li><a href='".BASEURL."/view/site/login.php'>Login</a></li>";
+                }
+                ?>
+                <?php 
+                  if(isset($_SESSION['user'])){
+                      echo "<li><a href='".BASEURL."/view/site/logout.php'>Logout</a></li>";
+                  }
+                ?>
               </ul>
             </div>
           </div>

@@ -1,4 +1,6 @@
 <?php 
+//VISTA PROVADA
+  include ('../../libs/security.php');
 
   include ('../../libs/adodb5/adodb-pager.inc.php');
   include ('../../libs/adodb5/adodb.inc.php');
@@ -142,12 +144,7 @@ $ArticuloC = new ArticuloController();
                   <div class="form-group">
                     <label for="articulo_status" class="col-sm-3 control-label">Estatus: </label>
                     <div class="col-sm-6">
-                      <select name="id_status" id="articulo_status" class="form-control">
-                        <option>Elige un estatus</option>
-                        <option value="1">Estatus 1</option>
-                        <option value="2">Estatus 2</option>
-                        <option value="3">Estatus 3</option>
-                      </select>
+                        <?php echo $ArticuloC->getDropDown('id_status','status','status','status','articulo_status',''); ?>
                     </div>
                   </div>
 <!-- Contenido -->
@@ -189,7 +186,8 @@ $ArticuloC = new ArticuloController();
                       <input type="submit" value="Enviar"  />
                     </div>
                   </div>
-
+                
+                <?php echo $ArticuloC->show_grid(); ?>
                 
                 </div>
               </div>

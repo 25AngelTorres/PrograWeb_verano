@@ -1,6 +1,6 @@
 <?php session_start();
       
-      include ('../../libs/adodb5/adodb-pager.inc.php');
+// para mostrar datos, no necesario aqui      include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');
       include ('../../models/Conexion.php');
       include ('../../models/Modelo.php');
@@ -13,7 +13,6 @@
       if (isset($_POST['email'])) {
         $login->validaUsuario($_POST);
       }
-      
       
       include ('../layouts/header.php');
 ?>

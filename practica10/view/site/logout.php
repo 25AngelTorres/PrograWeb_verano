@@ -8,8 +8,6 @@
       include ('../../controllers/siteController/LoginController.php');
       include ('../../libs/Er.php');
      
-
       $login = new LoginController();
-
         $login->cerrarSesion();
 ?>
